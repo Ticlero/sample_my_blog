@@ -1,0 +1,20 @@
+#root .contents {
+  padding-left: 23vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.contents .contents__header {
+  width: 100%;
+  height: fit-content;
+  background-color: #d6dccc;
+  display: flex;
+}
+
+.contents .contents__header .icons {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 22px;
+}

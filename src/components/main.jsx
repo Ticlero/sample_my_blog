@@ -5,8 +5,24 @@ import { ContentsComponent } from "./contents/ContentsComponent.jsx";
 export default class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      c_menu: "공지사항",
+    };
   }
+
+  _currentMenuChange = (e) => {
+    e.persist();
+    if (e.target.tagName !== "UL") {
+      this.setState((preState, props) => {
+        console.log(preState, props);
+        return {
+          c_menu: e.target.innerText,
+        };
+      });
+    } else {
+      console.error(`Click miss error. you have to click a 'LI' element. Not ${e.target.tagName}`);
+    }
+  };
 
   componentDidMount() {}
 
@@ -14,10 +30,10 @@ export default class Main extends Component {
     return (
       <Fragment>
         <div className="aside">
-          <LeftMenuComponent></LeftMenuComponent>
+          <LeftMenuComponent clickHandler={this._currentMenuChange}></LeftMenuComponent>
         </div>
         <div className="contents">
-          <ContentsComponent></ContentsComponent>
+          <ContentsComponent c_menu={this.state}></ContentsComponent>
         </div>
       </Fragment>
     );

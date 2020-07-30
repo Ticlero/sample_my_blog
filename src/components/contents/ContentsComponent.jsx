@@ -1,29 +1,57 @@
 import React, { Fragment } from "react";
 import { ContentsHeaderComponent } from "../header/HeaderComponent.jsx";
-import { loadCoords } from "./momentum/getCurrentWeather.jsx";
+import { MomentumComponent } from "./momentum/MomentumComponent.jsx";
 
-const MainViewControl = ({ menuName }) => ({ something = "" }) => {
-  loadCoords();
-  const wobj = JSON.parse(localStorage.getItem("weather"));
-  console.log(wobj);
-  return (
-    <Fragment>
-      <div className={menuName}>{`${menuName.c_menu} -> ${something}`}</div>
-      <div className="weather">{`${wobj.temp} \n ${wobj.place}`}</div>
-    </Fragment>
-  );
+const MainViewControl = (menuName) => ({ props }) => {
+  switch (menuName) {
+    case "공지사항":
+      return (
+        <Fragment>
+          <div className={menuName}>{`${menuName} -> ${props}`}</div>
+        </Fragment>
+      );
+      break;
+    case "일상":
+      return (
+        <Fragment>
+          <div className={menuName}>{`${menuName} -> ${props}`}</div>
+        </Fragment>
+      );
+      break;
+    case "Momentum":
+      return (
+        <Fragment>
+          <MomentumComponent props={props}></MomentumComponent>
+        </Fragment>
+      );
+      break;
+    case "javascript":
+      return (
+        <Fragment>
+          <div className={menuName}>{`${menuName} -> ${props}`}</div>
+        </Fragment>
+      );
+      break;
+    case "react":
+      return (
+        <Fragment>
+          <div className={menuName}>{`${menuName} -> ${props}`}</div>
+        </Fragment>
+      );
+      break;
+  }
 };
 
-const ContentsComponent = ({ c_menu }) => {
-  //console.log(c_menu);
-  var MainView = MainViewControl({ menuName: c_menu });
+const ContentsComponent = ({ props }) => {
+  console.log(props);
+  var MainView = MainViewControl(props.c_menu);
   return (
     <Fragment>
       <div className="contents__header">
         <ContentsHeaderComponent></ContentsHeaderComponent>
       </div>
       <div className="contents__main">
-        <MainView something={"test"}></MainView>
+        <MainView props={props}></MainView>
       </div>
     </Fragment>
   );

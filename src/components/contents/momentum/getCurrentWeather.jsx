@@ -15,7 +15,7 @@ const getWeather = (lati, longi) => {
     .then((json) => {
       console.log(json);
       const wObj = {
-        temp: json.main.temp,
+        temperature: json.main.temp,
         place: json.name,
       };
       localStorage.setItem(WEATHER, JSON.stringify(wObj));

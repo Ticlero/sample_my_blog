@@ -18,11 +18,26 @@ const getCurrentTime = () => {
   };
 };
 
-const getBackgroundImage = (w, h, season) => {
+const seasonCalculator = (ymd) => {
+  let month = ymd.split("-")[1].toString();
+  let season = "spring";
+
+  if (month >= 6 && month <= 8) {
+    season = "summer";
+  } else if (month >= 9 && month <= 10) {
+    season = "autumn";
+  } else if (month == 1 || month == 2 || (month >= 11 && month <= 12)) {
+    season = "winter";
+  }
+
+  return season;
+};
+
+const getBackgroundImage = (w, h) => {
   const image = new Image();
   const width = w;
   const height = h;
-  image.src = `${bgURL}${width}x${height}/?${season}`;
+  image.src = `${bgURL}${width}x${height}/?${seasonCalculator(getCurrentTime().ymd)},south-korea`;
   image.classList.add("bgImg");
   return image;
 };

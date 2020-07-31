@@ -1,6 +1,7 @@
-import React, { Fragment } from "react";
-import { getBackgroundImage } from "./getBackground.jsx";
-
+import React, { Fragment, Component, useCallback, createElement } from "react";
+import { getBackgroundImage, getCurrentTime } from "./getBackground.jsx";
+import { loadCoords } from "./getCurrentWeather.jsx";
+import * as toDoListHandler from "./toDoListHandler";
 var mainScreen = "";
 
 const getScreenWidth = () => {
@@ -11,26 +12,9 @@ const getScreenHeight = () => {
   return mainScreen.clientHeight;
 };
 
-const seasonCalculator = (ymd) => {
-  let month = ymd.split("-")[1].toString();
-  let season = "spring";
-
-  if (month >= 6 && month <= 8) {
-    season = "summer";
-  } else if (month >= 9 && month <= 10) {
-    season = "autumn";
-  } else if (month == 1 || month == 2 || (month >= 11 && month <= 12)) {
-    season = "winter";
-  }
-
-  return season;
-};
-
-const BackgroundComponent = ({ ymd }) => {
+const BackgroundComponent = () => {
   mainScreen = document.querySelector(".contents__main");
-  console.log(ymd);
-  console.log(getScreenWidth(), getScreenHeight());
-  const img = getBackgroundImage(getScreenWidth(), getScreenHeight(), seasonCalculator(ymd));
+  const img = getBackgroundImage(getScreenWidth(), getScreenHeight());
   return (
     <div className="main__bg">
       <img src={img.src} className={img.className}></img>
@@ -38,21 +22,122 @@ const BackgroundComponent = ({ ymd }) => {
   );
 };
 
+class WeatherComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      weather: {
+        place: "loading...",
+        temperature: "loading...",
+      },
+    };
+  }
+
+  componentDidMount() {
+    loadCoords();
+    this.tickId = setInterval(this._intervalFunc, 1000);
+  }
+
+  _intervalFunc = () => {
+    let place = "loading...",
+      temperature = "loading...";
+    let Isloaded = false;
+    let weather = JSON.parse(localStorage.getItem("weather"));
+    if (weather != null) {
+      place = weather.place;
+      temperature = weather.temperature;
+      Isloaded = true;
+      this.changeState(place, temperature);
+    }
+    if (Isloaded === true) {
+      Isloaded = false;
+      clearInterval(this.tickId);
+      toDoListHandler.loadTodoList();
+    }
+  };
+
+  changeState = (place, temperature) => {
+    this.setState((preState, props) => {
+      return {
+        weather: {
+          place,
+          temperature,
+        },
+      };
+    });
+  };
+
+  render() {
+    return (
+      <div className="weather">
+        <span>{`${this.state.weather.place}`}</span>
+        <span>{`${this.state.weather.temperature}℃`}</span>
+      </div>
+    );
+  }
+}
+
+class TimeComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      time: {
+        ymd: "",
+        hms: "",
+      },
+    };
+  }
+
+  _intervalFunc = () => {
+    let { ymd, hms } = getCurrentTime();
+    this.tick(ymd, hms);
+  };
+
+  tick = (ymd, hms) => {
+    this.setState((preState, props) => {
+      return {
+        time: {
+          ymd,
+          hms,
+        },
+      };
+    });
+  };
+
+  componentDidMount() {
+    this.timerID = setInterval(this._intervalFunc, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  render() {
+    return (
+      <div className="main__time">
+        <span>{this.state.time.ymd}</span>
+        <span>{this.state.time.hms}</span>
+      </div>
+    );
+  }
+}
+
+const TodoList = () => {
+  return (
+    <div className="main__todolist-container">
+      <input className="todolist-container__textbox" onKeyUp={toDoListHandler._handleToDoListInputBox} type="text" placeholder="오늘의 할 일을 적어보세요." />
+      <ul onClick={toDoListHandler._HandleClickTodoList} className="todolist-container__list"></ul>
+    </div>
+  );
+};
+
 const MomentumComponent = ({ props }) => {
-  let { ymd, hms } = props.momentum.time;
-  let { temp, place } = props.momentum.weather;
-  console.log(props, ymd, hms);
   return (
     <Fragment>
-      <BackgroundComponent ymd={ymd}></BackgroundComponent>
-      <div className="weather">
-        <span>{`${place}`}</span>
-        <span>{`${temp}℃`}</span>
-      </div>
-      <div className="main__time">
-        <span>{ymd}</span>
-        <span>{hms}</span>
-      </div>
+      <BackgroundComponent></BackgroundComponent>
+      <WeatherComponent props={props}></WeatherComponent>
+      <TimeComponent props={props}></TimeComponent>
+      <TodoList></TodoList>
     </Fragment>
   );
 };

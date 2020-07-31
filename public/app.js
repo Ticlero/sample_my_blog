@@ -33235,6 +33235,7 @@ __webpack_require__.r(__webpack_exports__);
 var MainViewControl = function MainViewControl(menuName) {
   return function (_ref) {
     var props = _ref.props;
+    console.log(menuName);
 
     switch (menuName) {
       case "공지사항":
@@ -33272,7 +33273,6 @@ var MainViewControl = function MainViewControl(menuName) {
 
 var ContentsComponent = function ContentsComponent(_ref2) {
   var props = _ref2.props;
-  console.log(props);
   var MainView = MainViewControl(props.c_menu);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "contents__header"
@@ -33297,21 +33297,78 @@ var ContentsComponent = function ContentsComponent(_ref2) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MomentumComponent", function() { return MomentumComponent; });
-/* harmony import */ var core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.date.to-string */ "./node_modules/core-js/modules/es.date.to-string.js");
-/* harmony import */ var core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _getBackground_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./getBackground.jsx */ "./src/components/contents/momentum/getBackground.jsx");
+/* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
+/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator */ "./node_modules/core-js/modules/es.symbol.iterator.js");
+/* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.date.to-string */ "./node_modules/core-js/modules/es.date.to-string.js");
+/* harmony import */ var core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_object_create__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.object.create */ "./node_modules/core-js/modules/es.object.create.js");
+/* harmony import */ var core_js_modules_es_object_create__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_create__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_define_property__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.define-property */ "./node_modules/core-js/modules/es.object.define-property.js");
+/* harmony import */ var core_js_modules_es_object_define_property__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_define_property__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.object.get-prototype-of */ "./node_modules/core-js/modules/es.object.get-prototype-of.js");
+/* harmony import */ var core_js_modules_es_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.object.set-prototype-of */ "./node_modules/core-js/modules/es.object.set-prototype-of.js");
+/* harmony import */ var core_js_modules_es_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_reflect_construct__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.reflect.construct */ "./node_modules/core-js/modules/es.reflect.construct.js");
+/* harmony import */ var core_js_modules_es_reflect_construct__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_reflect_construct__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! core-js/modules/web.timers */ "./node_modules/core-js/modules/web.timers.js");
+/* harmony import */ var core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _getBackground_jsx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./getBackground.jsx */ "./src/components/contents/momentum/getBackground.jsx");
+/* harmony import */ var _getCurrentWeather_jsx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./getCurrentWeather.jsx */ "./src/components/contents/momentum/getCurrentWeather.jsx");
+/* harmony import */ var _toDoListHandler__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./toDoListHandler */ "./src/components/contents/momentum/toDoListHandler.js");
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
@@ -33327,51 +33384,171 @@ var getScreenHeight = function getScreenHeight() {
   return mainScreen.clientHeight;
 };
 
-var seasonCalculator = function seasonCalculator(ymd) {
-  var month = ymd.split("-")[1].toString();
-  var season = "spring";
-
-  if (month >= 6 && month <= 8) {
-    season = "summer";
-  } else if (month >= 9 && month <= 10) {
-    season = "autumn";
-  } else if (month == 1 || month == 2 || month >= 11 && month <= 12) {
-    season = "winter";
-  }
-
-  return season;
-};
-
-var BackgroundComponent = function BackgroundComponent(_ref) {
-  var ymd = _ref.ymd;
+var BackgroundComponent = function BackgroundComponent() {
   mainScreen = document.querySelector(".contents__main");
-  console.log(ymd);
-  console.log(getScreenWidth(), getScreenHeight());
-  var img = Object(_getBackground_jsx__WEBPACK_IMPORTED_MODULE_6__["getBackgroundImage"])(getScreenWidth(), getScreenHeight(), seasonCalculator(ymd));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+  var img = Object(_getBackground_jsx__WEBPACK_IMPORTED_MODULE_16__["getBackgroundImage"])(getScreenWidth(), getScreenHeight());
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
     className: "main__bg"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("img", {
     src: img.src,
     className: img.className
   }));
 };
 
-var MomentumComponent = function MomentumComponent(_ref2) {
-  var props = _ref2.props;
-  var _props$momentum$time = props.momentum.time,
-      ymd = _props$momentum$time.ymd,
-      hms = _props$momentum$time.hms;
-  var _props$momentum$weath = props.momentum.weather,
-      temp = _props$momentum$weath.temp,
-      place = _props$momentum$weath.place;
-  console.log(props, ymd, hms);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(BackgroundComponent, {
-    ymd: ymd
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-    className: "weather"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, "".concat(place)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, "".concat(temp, "\u2103"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-    className: "main__time"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, ymd), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, hms)));
+var WeatherComponent = /*#__PURE__*/function (_Component) {
+  _inherits(WeatherComponent, _Component);
+
+  var _super = _createSuper(WeatherComponent);
+
+  function WeatherComponent(props) {
+    var _this;
+
+    _classCallCheck(this, WeatherComponent);
+
+    _this = _super.call(this, props);
+
+    _this._intervalFunc = function () {
+      var place = "loading...",
+          temperature = "loading...";
+      var Isloaded = false;
+      var weather = JSON.parse(localStorage.getItem("weather"));
+
+      if (weather != null) {
+        place = weather.place;
+        temperature = weather.temperature;
+        Isloaded = true;
+
+        _this.changeState(place, temperature);
+      }
+
+      if (Isloaded === true) {
+        Isloaded = false;
+        clearInterval(_this.tickId);
+        _toDoListHandler__WEBPACK_IMPORTED_MODULE_18__["loadTodoList"]();
+      }
+    };
+
+    _this.changeState = function (place, temperature) {
+      _this.setState(function (preState, props) {
+        return {
+          weather: {
+            place: place,
+            temperature: temperature
+          }
+        };
+      });
+    };
+
+    _this.state = {
+      weather: {
+        place: "loading...",
+        temperature: "loading..."
+      }
+    };
+    return _this;
+  }
+
+  _createClass(WeatherComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      Object(_getCurrentWeather_jsx__WEBPACK_IMPORTED_MODULE_17__["loadCoords"])();
+      this.tickId = setInterval(this._intervalFunc, 1000);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+        className: "weather"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", null, "".concat(this.state.weather.place)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", null, "".concat(this.state.weather.temperature, "\u2103")));
+    }
+  }]);
+
+  return WeatherComponent;
+}(react__WEBPACK_IMPORTED_MODULE_15__["Component"]);
+
+var TimeComponent = /*#__PURE__*/function (_Component2) {
+  _inherits(TimeComponent, _Component2);
+
+  var _super2 = _createSuper(TimeComponent);
+
+  function TimeComponent(props) {
+    var _this2;
+
+    _classCallCheck(this, TimeComponent);
+
+    _this2 = _super2.call(this, props);
+
+    _this2._intervalFunc = function () {
+      var _getCurrentTime = Object(_getBackground_jsx__WEBPACK_IMPORTED_MODULE_16__["getCurrentTime"])(),
+          ymd = _getCurrentTime.ymd,
+          hms = _getCurrentTime.hms;
+
+      _this2.tick(ymd, hms);
+    };
+
+    _this2.tick = function (ymd, hms) {
+      _this2.setState(function (preState, props) {
+        return {
+          time: {
+            ymd: ymd,
+            hms: hms
+          }
+        };
+      });
+    };
+
+    _this2.state = {
+      time: {
+        ymd: "",
+        hms: ""
+      }
+    };
+    return _this2;
+  }
+
+  _createClass(TimeComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.timerID = setInterval(this._intervalFunc, 1000);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.timerID);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+        className: "main__time"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", null, this.state.time.ymd), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", null, this.state.time.hms));
+    }
+  }]);
+
+  return TimeComponent;
+}(react__WEBPACK_IMPORTED_MODULE_15__["Component"]);
+
+var TodoList = function TodoList() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+    className: "main__todolist-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("input", {
+    className: "todolist-container__textbox",
+    onKeyUp: _toDoListHandler__WEBPACK_IMPORTED_MODULE_18__["_handleToDoListInputBox"],
+    type: "text",
+    placeholder: "\uC624\uB298\uC758 \uD560 \uC77C\uC744 \uC801\uC5B4\uBCF4\uC138\uC694."
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("ul", {
+    onClick: _toDoListHandler__WEBPACK_IMPORTED_MODULE_18__["_HandleClickTodoList"],
+    className: "todolist-container__list"
+  }));
+};
+
+var MomentumComponent = function MomentumComponent(_ref) {
+  var props = _ref.props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_15__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(BackgroundComponent, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(WeatherComponent, {
+    props: props
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(TimeComponent, {
+    props: props
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(TodoList, null));
 };
 
 
@@ -33393,6 +33570,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.date.to-string */ "./node_modules/core-js/modules/es.date.to-string.js");
 /* harmony import */ var core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_date_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
 
 
 var bgURL = "https://source.unsplash.com/";
@@ -33413,11 +33602,26 @@ var getCurrentTime = function getCurrentTime() {
   };
 };
 
-var getBackgroundImage = function getBackgroundImage(w, h, season) {
+var seasonCalculator = function seasonCalculator(ymd) {
+  var month = ymd.split("-")[1].toString();
+  var season = "spring";
+
+  if (month >= 6 && month <= 8) {
+    season = "summer";
+  } else if (month >= 9 && month <= 10) {
+    season = "autumn";
+  } else if (month == 1 || month == 2 || month >= 11 && month <= 12) {
+    season = "winter";
+  }
+
+  return season;
+};
+
+var getBackgroundImage = function getBackgroundImage(w, h) {
   var image = new Image();
   var width = w;
   var height = h;
-  image.src = "".concat(bgURL).concat(width, "x").concat(height, "/?").concat(season);
+  image.src = "".concat(bgURL).concat(width, "x").concat(height, "/?").concat(seasonCalculator(getCurrentTime().ymd), ",south-korea");
   image.classList.add("bgImg");
   return image;
 };
@@ -33462,7 +33666,7 @@ var getWeather = function getWeather(lati, longi) {
   }).then(function (json) {
     console.log(json);
     var wObj = {
-      temp: json.main.temp,
+      temperature: json.main.temp,
       place: json.name
     };
     localStorage.setItem(WEATHER, JSON.stringify(wObj));
@@ -33503,6 +33707,139 @@ var loadCoords = function loadCoords() {
     var lat = "".concat(crdObj.latitude);
     var lon = "".concat(crdObj.longitude);
     getWeather(lat, lon);
+  }
+};
+
+
+
+/***/ }),
+
+/***/ "./src/components/contents/momentum/toDoListHandler.js":
+/*!*************************************************************!*\
+  !*** ./src/components/contents/momentum/toDoListHandler.js ***!
+  \*************************************************************/
+/*! exports provided: _handleToDoListInputBox, _handleTextBox, addToList, _HandleClickTodoList, loadTodoList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_handleToDoListInputBox", function() { return _handleToDoListInputBox; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_handleTextBox", function() { return _handleTextBox; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToList", function() { return addToList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_HandleClickTodoList", function() { return _HandleClickTodoList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadTodoList", function() { return loadTodoList; });
+var _handleToDoListInputBox = function _handleToDoListInputBox(e) {
+  console.dir(e);
+  console.log(e.keyCode);
+  console.log(e.which);
+
+  if (e.keyCode === 13) {
+    _handleTextBox();
+  }
+};
+
+var _handleTextBox = function _handleTextBox() {
+  var textbox = document.querySelector(".todolist-container__textbox");
+
+  if (textbox.value !== "") {
+    addToList(textbox.value);
+    textbox.value = "";
+  }
+
+  textbox.value = "";
+};
+
+var addToList = function addToList(text) {
+  var parent = document.querySelector(".todolist-container__list");
+  var listItem = document.createElement("li");
+  listItem.classList.add("list-item");
+  var clear = document.createElement("span");
+  clear.classList.add("c-icon");
+  var clearIcon = document.createElement("i");
+  clearIcon.addEventListener("click", listItemControl);
+  clearIcon.classList.add("far");
+  clearIcon.classList.add("fa-thumbs-up");
+  clear.appendChild(clearIcon);
+  var remove = document.createElement("span");
+  remove.classList.add("c-icon");
+  var removeIcon = document.createElement("i");
+  removeIcon.addEventListener("click", listItemControl);
+  removeIcon.classList.add("fas");
+  removeIcon.classList.add("fa-eraser");
+  remove.appendChild(removeIcon);
+  var textSpan = document.createElement("span");
+  textSpan.innerText = text;
+  listItem.appendChild(clear);
+  listItem.appendChild(textSpan);
+  listItem.appendChild(remove);
+  parent.appendChild(listItem);
+  saveTodoList();
+};
+
+var listItemControl = function listItemControl(e) {
+  var parent = document.querySelector(".todolist-container__list");
+
+  if (e.target.classList[1] === "fa-eraser") {
+    for (var i = 0; i < parent.childNodes.length; i++) {
+      var li = parent.childNodes[i];
+
+      if (e.target === li.childNodes[2].childNodes[0]) {
+        parent.removeChild(li);
+        saveTodoList();
+        break;
+      }
+    }
+  } else {
+    for (var i = 0; i < parent.childNodes.length; i++) {
+      var _li = parent.childNodes[i];
+
+      if (e.target === _li.childNodes[0].childNodes[0]) {
+        _li.classList.toggle("clear-item");
+
+        if (_li.classList.contains("clear-item")) {
+          _li.style.textDecoration = "line-through";
+        } else {
+          _li.style.textDecoration = "none";
+        }
+      }
+    }
+  }
+};
+
+var saveTodoList = function saveTodoList() {
+  if (localStorage.removeItem("lists") != null) localStorage.removeItem("lists");
+  var parent = document.querySelector(".todolist-container__list");
+  var listObj = {};
+  var i = 0;
+
+  for (i; i < parent.childNodes.length; i++) {
+    var li = parent.childNodes[i];
+    listObj[i] = li.childNodes[1].innerText;
+  }
+
+  listObj["length"] = parent.childNodes.length;
+  localStorage.setItem("lists", JSON.stringify(listObj));
+};
+
+var loadTodoList = function loadTodoList() {
+  if (localStorage.getItem("lists") === null) {
+    return;
+  } else {
+    var lists = JSON.parse(localStorage.getItem("lists"));
+
+    for (var i = 0; i < lists.length; i++) {
+      addToList(lists[i]);
+    }
+  }
+};
+
+var _HandleClickTodoList = function _HandleClickTodoList(e) {
+  e.persist();
+
+  if (e.target.tagName !== "UL") {
+    console.log(e.target.innerText);
+  } else {
+    console.error("Click miss error. you have to click a 'LI' element. Not ".concat(e.target.tagName));
   }
 };
 
@@ -33620,15 +33957,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! core-js/modules/web.timers */ "./node_modules/core-js/modules/web.timers.js");
-/* harmony import */ var core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _left_menu_LeftMenuComponent_jsx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./left-menu/LeftMenuComponent.jsx */ "./src/components/left-menu/LeftMenuComponent.jsx");
-/* harmony import */ var _contents_ContentsComponent_jsx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./contents/ContentsComponent.jsx */ "./src/components/contents/ContentsComponent.jsx");
-/* harmony import */ var _contents_momentum_getCurrentWeather_jsx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./contents/momentum/getCurrentWeather.jsx */ "./src/components/contents/momentum/getCurrentWeather.jsx");
-/* harmony import */ var _contents_momentum_getBackground_jsx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./contents/momentum/getBackground.jsx */ "./src/components/contents/momentum/getBackground.jsx");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _left_menu_LeftMenuComponent_jsx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./left-menu/LeftMenuComponent.jsx */ "./src/components/left-menu/LeftMenuComponent.jsx");
+/* harmony import */ var _contents_ContentsComponent_jsx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./contents/ContentsComponent.jsx */ "./src/components/contents/ContentsComponent.jsx");
 
 
 
@@ -33670,9 +34002,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-
-var interval = null;
-
 var Main = /*#__PURE__*/function (_Component) {
   _inherits(Main, _Component);
 
@@ -33685,77 +34014,22 @@ var Main = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
 
-    _this._intervalFunc = function (menu, weather) {
-      var temp = weather.temp,
-          place = weather.place;
-
-      var _getCurrentTime = Object(_contents_momentum_getBackground_jsx__WEBPACK_IMPORTED_MODULE_19__["getCurrentTime"])(),
-          ymd = _getCurrentTime.ymd,
-          hms = _getCurrentTime.hms;
-
-      _this.setState(function (preState, props) {
-        return {
-          c_menu: menu,
-          momentum: {
-            weather: {
-              temp: temp,
-              place: place
-            },
-            time: {
-              interval: interval,
-              ymd: ymd,
-              hms: hms
-            }
-          }
-        };
-      });
-    };
-
     _this._currentMenuChange = function (e) {
       e.persist();
 
       if (e.target.tagName !== "UL") {
-        if (e.target.innerText.toLowerCase() === "momentum") {
-          Object(_contents_momentum_getCurrentWeather_jsx__WEBPACK_IMPORTED_MODULE_18__["loadCoords"])();
-          var wobj = JSON.parse(localStorage.getItem("weather"));
-          console.log("weather", wobj);
-
-          if (_this.state.momentum.time.interval === null || _this.state.momentum.time.interval === undefined) {
-            interval = setInterval(_this._intervalFunc, 1000, e.target.innerText, wobj);
-          }
-        } else {
-          clearInterval(interval);
-          interval = null;
-
-          _this.setState(function (preState, props) {
-            return {
-              c_menu: e.target.innerText,
-              momentum: {
-                time: {
-                  interval: interval
-                }
-              }
-            };
-          });
-        }
+        _this.setState(function (preState, props) {
+          return {
+            c_menu: e.target.innerText
+          };
+        });
       } else {
         console.error("Click miss error. you have to click a 'LI' element. Not ".concat(e.target.tagName));
       }
     };
 
     _this.state = {
-      c_menu: "공지사항",
-      momentum: {
-        weather: {
-          temp: "",
-          place: ""
-        },
-        time: {
-          interval: interval,
-          ymd: "",
-          hms: ""
-        }
-      }
+      c_menu: "공지사항"
     };
     return _this;
   }
@@ -33766,20 +34040,20 @@ var Main = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_15__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_14__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
         className: "aside"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_left_menu_LeftMenuComponent_jsx__WEBPACK_IMPORTED_MODULE_16__["LeftMenuComponent"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_left_menu_LeftMenuComponent_jsx__WEBPACK_IMPORTED_MODULE_15__["LeftMenuComponent"], {
         clickHandler: this._currentMenuChange
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
         className: "contents"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_contents_ContentsComponent_jsx__WEBPACK_IMPORTED_MODULE_17__["ContentsComponent"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_contents_ContentsComponent_jsx__WEBPACK_IMPORTED_MODULE_16__["ContentsComponent"], {
         props: this.state
       })));
     }
   }]);
 
   return Main;
-}(react__WEBPACK_IMPORTED_MODULE_15__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_14__["Component"]);
 
 
 

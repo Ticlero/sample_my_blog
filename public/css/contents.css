@@ -40,15 +40,21 @@
   align-items: center;
   flex-direction: column;
   font-size: 2vh;
-  width: 100%;
-  height: 96.8vh;
+  width: 75vw;
+  height: 100vh;
   color: white;
 }
 
 .contents .contents__main .main__bg {
   position: absolute;
-  top: 0;
+  width: 77vw;
+  height: 100vh;
   z-index: -1;
+}
+
+.contents .contents__main .main__bg > img {
+  width: 100%;
+  height: 100%;
 }
 
 .contents .contents__main .main__time {
@@ -58,6 +64,8 @@
   flex-direction: column;
   font-size: 4rem;
   font-weight: 600;
+
+  color: #d9ecf2;
 }
 
 .contents .contents__main .weather {
@@ -70,4 +78,32 @@
   right: 0;
   font-size: 2rem;
   font-weight: 500;
+  color: #d9ecf2;
+}
+.contents .contents__main .main__todolist-container {
+  width: 30vw;
+}
+.contents .contents__main .main__todolist-container .todolist-container__textbox {
+  width: 100%;
+}
+
+.todolist-container__list .list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30vw;
+}
+.todolist-container__list .list-item span {
+  width: fit-content;
+  padding: 0.5vw;
+  box-sizing: border-box;
+}
+.todolist-container__list .list-item span:nth-child(2) {
+  width: 26vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todolist-container__list .list-item span i {
+  cursor: pointer;
 }

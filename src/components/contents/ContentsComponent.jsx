@@ -3,6 +3,7 @@ import { ContentsHeaderComponent } from "../header/HeaderComponent.jsx";
 import { MomentumComponent } from "./momentum/MomentumComponent.jsx";
 
 const MainViewControl = (menuName) => ({ props }) => {
+  console.log(menuName);
   switch (menuName) {
     case "공지사항":
       return (
@@ -43,7 +44,6 @@ const MainViewControl = (menuName) => ({ props }) => {
 };
 
 const ContentsComponent = ({ props }) => {
-  console.log(props);
   var MainView = MainViewControl(props.c_menu);
   return (
     <Fragment>

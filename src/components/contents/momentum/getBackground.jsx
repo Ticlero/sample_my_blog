@@ -37,7 +37,7 @@ const getBackgroundImage = (w, h) => {
   const image = new Image();
   const width = w;
   const height = h;
-  image.src = `${bgURL}${width}x${height}/?${seasonCalculator(getCurrentTime().ymd)},south-korea`;
+  image.src = `${bgURL}${width}x${height}/?${seasonCalculator(getCurrentTime().ymd)}`;
   image.classList.add("bgImg");
   return image;
 };

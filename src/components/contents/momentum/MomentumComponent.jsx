@@ -50,7 +50,7 @@ class WeatherComponent extends Component {
       this.changeState(place, temperature);
     }
     if (Isloaded === true) {
-      Isloaded = false;
+      //Isloaded = false;
       clearInterval(this.tickId);
       toDoListHandler.loadTodoList();
     }
@@ -115,8 +115,8 @@ class TimeComponent extends Component {
   render() {
     return (
       <div className="main__time">
-        <span>{this.state.time.ymd}</span>
-        <span>{this.state.time.hms}</span>
+        <span className="time-hms">{this.state.time.hms}</span>
+        <span className="time-ymd">{this.state.time.ymd}</span>
       </div>
     );
   }

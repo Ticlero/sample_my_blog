@@ -1,23 +1,18 @@
 import React, { Fragment } from "react";
 import { ContentsHeaderComponent } from "../header/HeaderComponent.jsx";
 import { MomentumComponent } from "./momentum/MomentumComponent.jsx";
+import { PublicPostScreenComponent } from "./public_src/PublicPostScreenComponent.jsx";
 
 const MainViewControl = (menuName) => ({ props }) => {
-  console.log(menuName);
+  console.log(props);
+  let title = menuName,
+    cName = "";
   switch (menuName) {
     case "공지사항":
-      return (
-        <Fragment>
-          <div className={menuName}>{`${menuName} -> ${props}`}</div>
-        </Fragment>
-      );
+      cName = "public-info";
       break;
     case "일상":
-      return (
-        <Fragment>
-          <div className={menuName}>{`${menuName} -> ${props}`}</div>
-        </Fragment>
-      );
+      cName = "daily-life";
       break;
     case "Momentum":
       return (
@@ -25,22 +20,15 @@ const MainViewControl = (menuName) => ({ props }) => {
           <MomentumComponent props={props}></MomentumComponent>
         </Fragment>
       );
-      break;
     case "javascript":
-      return (
-        <Fragment>
-          <div className={menuName}>{`${menuName} -> ${props}`}</div>
-        </Fragment>
-      );
+      cName = "javascrip-post";
       break;
     case "react":
-      return (
-        <Fragment>
-          <div className={menuName}>{`${menuName} -> ${props}`}</div>
-        </Fragment>
-      );
+      cName = "react-post";
       break;
   }
+
+  return <PublicPostScreenComponent title={title} cName={cName}></PublicPostScreenComponent>; //<div>test</div>;
 };
 
 const ContentsComponent = ({ props }) => {

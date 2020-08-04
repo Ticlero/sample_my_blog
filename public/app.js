@@ -33951,8 +33951,10 @@ var PublicPostScreenComponent = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
         className: "main-post-screen"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
+        className: "post-header"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
         className: "post-title"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("h3", null, this.state.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", null, this.state.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
         className: "post-search"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("input", {
         type: "text",

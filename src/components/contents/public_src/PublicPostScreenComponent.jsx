@@ -13,8 +13,10 @@ export class PublicPostScreenComponent extends Component {
     console.log(this.state);
     return (
       <div className="main-post-screen">
-        <div className="post-title">
-          <h3>{this.state.title}</h3>
+        <div className="post-header">
+          <div className="post-title">
+            <span>{this.state.title}</span>
+          </div>
           <div className="post-search">
             <input type="text" placeholder="Search" />
           </div>

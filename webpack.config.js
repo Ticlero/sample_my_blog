@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -20,11 +21,24 @@ module.exports = {
       },
       {
         test: /\.css/,
-        use: ["css-loader", "style-loader"],
+        use: [
+          { loader: "style-loader" },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+        ],
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
+  ],
 
   output: {
     path: path.resolve(__dirname, "public"),

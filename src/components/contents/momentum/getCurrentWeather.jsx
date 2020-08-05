@@ -13,7 +13,6 @@ const getWeather = (lati, longi) => {
       return res.json();
     })
     .then((json) => {
-      console.log(json);
       const wObj = {
         temperature: json.main.temp,
         place: json.name,

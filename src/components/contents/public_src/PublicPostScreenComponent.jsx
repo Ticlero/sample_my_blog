@@ -28,7 +28,15 @@ export class PublicPostScreenComponent extends Component {
   writeModal = () => {
     return (
       <>
-        <Modal show={this.state.modalShow} onHide={this._handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered backdrop="static" keyboard={false}>
+        <Modal
+          show={this.state.modalShow}
+          onHide={this._handleClose}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+          backdrop="static"
+          keyboard={false}
+        >
           <Modal.Header closeButton>
             <Modal.Title>{this.state.title + " > 글쓰기"}</Modal.Title>
           </Modal.Header>

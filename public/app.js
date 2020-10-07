@@ -61431,7 +61431,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*!
+/* WEBPACK VAR INJECTION */(function(jQuery) {/*!
  * 
  * Super simple wysiwyg editor v0.8.18
  * https://summernote.org
@@ -61701,6 +61701,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /******/ });
 });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 

@@ -28,7 +28,7 @@
   "dependencies": {
     "bootstrap": "^4.5.1",
     "core-js": "^3.6.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fs": "0.0.1-security",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
